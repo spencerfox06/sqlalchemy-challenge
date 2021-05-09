@@ -38,6 +38,7 @@ def home():
         f"/api/v1.0/precipitation<br/>"
         f"/api/v1.0/stations<br/>"
         f"/api/v1.0/tobs<br/>"
+        f"/api/v1.0/start_date<br/>"
 
     )
 
@@ -92,6 +93,26 @@ def tobs():
     return jsonify(tobs)
 
 ##########################################
+
+#@app.route("/api/v1.0/start_date>")
+#def start_date():
+
+    #session = Session(engine)
+
+    #canonicalized = Measurement.date.replace(" ", "").lower()
+    #for date in Measurement:
+        #search_term = date["start_date"].replace(" ", "").lower()
+
+    #results = session.query(Measurement.date, Measurement.tobs).\
+        #filter(Measurement.date >= search_term).\
+        #filter(Measurement.prcp != "None").\
+        #all()
+
+    #start_date = {date: tobs for date, tobs in results}
+
+    #session.close()
+
+    #return jsonify(tobs)
 
 
 if __name__ == '__main__':
